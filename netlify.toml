@@ -1,0 +1,15 @@
+[build]
+  publish = "./"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Uncomment to enable a basic Content-Security-Policy. Adjust directives as needed.
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+#     Content-Security-Policy = "default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; form-action 'self'"
